@@ -11,10 +11,10 @@ const Home = () => {
 
   return (
     <div>
-      <Header/>  // הצגת רכיב ה-Header שיכול לכלול תפריט ניווט, חיפוש וכו'
-      <ExploreMenu category={category} setCategory={setCategory}/>  // הצגת רכיב ExploreMenu עם העברת הקטגוריה והפונקציה לשינוי קטגוריה
-      <FoodDisplay category={category}/>  // הצגת רכיב FoodDisplay שמציג את המאכלים לפי הקטגוריה הנבחרת
-      <AppDownload/>  // הצגת רכיב AppDownload שמעודד הורדת האפליקציה
+      <Header/>  
+      <ExploreMenu category={category} setCategory={setCategory}/>  
+      <FoodDisplay category={category}/>  
+      <AppDownload/>  
     </div>
   )
 }

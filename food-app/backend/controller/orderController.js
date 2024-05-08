@@ -1,9 +1,9 @@
 import orderModel from '../modules/orderModel.js'; // ייבוא מודל הזמנות
 import userModel from '../modules/usermodel.js'; // ייבוא מודל משתמשים
 import Stripe from 'stripe'; // ייבוא מודול Stripe לעיבוד תשלומים
-import "dotenv/config"; // ייבוא הגדרות משתני סביבה
+import 'dotenv/config';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY); // יצירת מופע של Stripe עם מפתח סודי
+const stripe = new Stripe(process.env.STRIP_SECRET_KEY); // יצירת מופע של Stripe עם מפתח סודי
 
 // הזמנת משתמש
 const placeOrder = async (req, res) => {
@@ -49,7 +49,9 @@ const placeOrder = async (req, res) => {
         res.json({ success: true, session_url: session.url });
     } catch (error) {
         console.log(error);
-        res.json({ success: false, message: "Error" });
+        res.json({ success: false, message: "Error 1"  });
+        console.log(error.message);
+
     }
 };
 
@@ -65,7 +67,7 @@ const verifyOrder = async (req, res) => {
             res.json({ success: false, message: "Not Paid" });
         }
     } catch (error) {
-        res.json({ success: false, message: "error" });
+        res.json({ success: false, message: "error 2" });
     }
 };
 
@@ -76,7 +78,7 @@ const userOrders = async (req, res) => {
         res.json({ success: true, data: orders });
     } catch (error) {
         console.log(error);
-        res.json({ success: false, message: "Error" });
+        res.json({ success: false, message: "Error 3" });
     }
 };
 

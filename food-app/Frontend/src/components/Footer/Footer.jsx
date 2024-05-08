@@ -8,7 +8,7 @@ const Footer = () => {
     <div className='footer' id="footer"> {/* יצירת אלמנט div עם מחלקת CSS שנקראת 'footer' ועם זיהוי ייחודי של 'footer' */}
       <div className="footer-content"> {/* יצירת קלט div עם מחלקת CSS שנקראת 'footer-content' */}
         <div className="footer-content-left"> {/* יצירת קלט div עם מחלקת CSS שנקראת 'footer-content-left' */}
-          <img src={assets.logo} /> {/* יצירת תמונה מתוך ה-assets */}
+          <img src={assets.logo} className='logo' /> {/* יצירת תמונה מתוך ה-assets */}
           <p>
             {/* יצירת פסקה */}
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod quis nobis nostrum tempora ut hic dolor debitis quidem officia consectetur alias reiciendis vel placeat dolorem nulla culpa, cumque cupiditate est?,

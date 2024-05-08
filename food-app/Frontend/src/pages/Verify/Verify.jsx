@@ -25,8 +25,8 @@ const Verify = () => {
      }, [])  // רשימת תלויות ריקה מבטיחה שהפונקציה תופעל פעם אחת בלבד לאחר טעינת הקומפוננטה
 
   return (
-    <div className='verify'>  // שימוש ב-class verify לסגנון הרכיב
-     <div className="spinner"></div>  // יצירת אלמנט spinner להצגת אינדיקציה חזותית של תהליך בעיבוד
+    <div className='verify'>  
+     <div className="spinner"></div>  
     </div>
   )
 }

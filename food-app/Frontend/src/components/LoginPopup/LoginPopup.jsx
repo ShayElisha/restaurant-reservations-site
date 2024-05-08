@@ -38,7 +38,7 @@ const LoginPopup = ({ setShowLogin }) => {
       <form onSubmit={onLogin} className="login-popup-container">
           <div className="login-popup-title">
                <h2>{currState}</h2>  // כותרת לפי המצב, התחברות או הרשמה
-               <img onClick={() => setShowLogin(false)} src={assets.cross_icon} alt="" />  // כפתור סגירה
+               <img onClick={() => setShowLogin(false)} src={assets.cross_icon} alt="" /> 
           </div>
           <div className="login-popup-input">
                {currState !== "Login" && <input name='name' onChange={onChangeHandler} value={data.name} type="text" placeholder='Your name' required/>}
@@ -47,7 +47,7 @@ const LoginPopup = ({ setShowLogin }) => {
           </div>
           <button type='submit'>{currState === "Sign Up" ? "Create account" : "Login"}</button>
           <div className="login-popup-condition">
-               <input type="checkbox" required />  // תיבת סימון לתנאי שימוש
+               <input type="checkbox" required />  
                <p>By continuing, i agree the terms of use & privacy policy</p>
           </div>
           {currState === "Login" ?  // קישור לשינוי בין מצבי הרישום וההתחברות

@@ -7,9 +7,9 @@ import StoreContextProvider from './context/StoreContext.jsx'  // ייבוא ש�
 
 // יצירת שורש האפליקציה באלמנט בעל ה-ID 'root' והכנסת האפליקציה ל-DOM
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>  // הקיפול של כל האפליקציה בתוך BrowserRouter לניהול ניווט
-    <StoreContextProvider>  // הקיפול של כל האפליקציה בתוך StoreContextProvider לספק קונטקסט עם נתונים כלליים
-      <App />  // הכנסת רכיב App כרכיב הראשי באפליקציה
+  <BrowserRouter>  
+    <StoreContextProvider>  
+      <App />  
     </StoreContextProvider>
   </BrowserRouter>
 )

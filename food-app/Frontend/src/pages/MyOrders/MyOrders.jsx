@@ -26,16 +26,16 @@ const MyOrders = () => {
           {data.map((order, index) => {  // עיבוד והצגת כל הזמנה בלולאה
                return (
                     <div key={index} className="my-orders-order">
-                    <img src={assets.parcel_icon} alt=""/>  // תמונת פריט לכל הזמנה
+                    <img src={assets.parcel_icon} alt=""/>  
                     <p>{order.items.map((item, index) => {  // הצגת רשימת הפריטים בהזמנה
                          return index === order.items.length - 1 ? 
                               item.name + " x " + item.quantity : 
                               item.name + " x " + item.quantity + ", "
                     })}</p>
-                    <p>${order.amount}.00</p>  // הצגת סכום ההזמנה
-                    <p>Items: {order.items.length}</p>  // מספר הפריטים בהזמנה
-                    <p><span>&#x25cf;</span><b>{order.status}</b></p>  // סטטוס ההזמנה
-                    <button onClick={fetchOrders}>Track Order</button>  // כפתור לעדכון סטטוס ההזמנה
+                    <p>${order.amount}.00</p>  
+                    <p>Items: {order.items.length}</p> 
+                    <p><span>&#x25cf;</span><b>{order.status}</b></p> 
+                    <button onClick={fetchOrders}>Track Order</button>  
                </div>
                )
           })}
